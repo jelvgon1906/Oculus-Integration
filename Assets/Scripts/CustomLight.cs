@@ -14,7 +14,12 @@ public class CustomLight : MonoBehaviour
                 if (OVRInput.GetDown(OVRInput.Button.One))
                 {
                     onLight = !onLight;
-                }
+
+                    if (onLight) 
+                    {
+                    touchLight.gameObject.SetActive(true);
+                    }else touchLight.gameObject.SetActive(false);
+            }
         }
     }
 }
